@@ -1,0 +1,1 @@
+ffmpeg -i ./healty-time/videos/healty-time.mp4 -acodec pcm_s16le -ac 1 -ar 16000 ./healty-time/audios/healty-time.wav
