@@ -20,13 +20,15 @@ For converting YouTube-to-text (video > audio > text).
 ├───result
 │   └───{PROJECT_NAME}
 │       └───{EXEC_DATETIME_FORMAT}
-└───thai
-    ├───env
-    │   └───...
-    ├───requirements.txt
-    ├───run.py
-    └───utils
-        └───audio_splitter.py
+├───thai
+│   ├───env
+│   │   └───...
+│   ├───requirements.txt
+│   ├───run.py
+│   └───utils
+│       └───audio_splitter.py
+├───.gitignore
+└───README.md
 ```
 
 - Install torch to support your GPU, in this case I using CUDA 12.1 :
@@ -78,6 +80,15 @@ then run command below separatly:
 
 ```sh
 python run.py
+PYTORCH_CUDA_ALLOC_CONF : max_split_size_mb:512
+0 Done
+1 Done
+2 Done
+3 Done
+All splited successfully
+[*] processing audio file : ../data/{PROJECT_NAME}/tmp/0_{PROJECT_NAME}.wav...
+น้ำหนัก หก สิบ สูง หนึ่ง ล้อย หก สิบ เจ็ด วัน นี้ ครบ สาม เดือน ที่ ประสบ เหตุ รถ จักรยาน เฉี่ยวชน ไหปะรา ข้าง ขวา หัก ซี่ โครง ด้าน หลัง หัก ใน ซีด ที่ สาม สี่ห้า ที่ม ปอด ตอน นี่ หาย เก้า สิบ ห้า เปิด เซ็น ละ ออก กำลัง กาย เตะ ตระก้อ วง ได้ แล้ว ตี สอก ด้าน หลัง ได้ ซิด อัป ได้ นิดหน่อย แต่ วิท พื้น ยัง ไม่ ได้
+# ...
 ```
 
 The output or text result will be wrote into `result/{PROJECT_NAME}/{EXEC_DATETIME_FORMAT}/{PROJECT_NAME}.txt`.
